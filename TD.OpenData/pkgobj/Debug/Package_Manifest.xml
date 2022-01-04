@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="6d1135cb-f6a3-4d5b-bb0b-636961b11ef5" SharePointProductVersion="15.0">
+  <Assemblies>
+    <Assembly Location="TD.OpenData.dll" DeploymentTarget="WebApplication" />
+  </Assemblies>
+  <RootFiles>
+    <RootFile Location="ISAPI\TD.OpenData.Services\OpenDataService.svc" />
+  </RootFiles>
+  <FeatureManifests>
+    <FeatureManifest Location="TD.OpenData_Feature1\Feature.xml" />
+  </FeatureManifests>
+</Solution>

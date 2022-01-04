@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="Menu"
+                OnQuickLaunch="TRUE"
+                TemplateType="10017"
+                FeatureId="d88694fe-fa0e-4186-b2e9-2655e90c9153"
+                Url="Lists/Menu"
+                Description="My List Instance">
+    <Data>
+      <Rows>
+        <Row>
+          <Field Name="ID">1</Field>
+          <Field Name="Title">Examlple Left Menu</Field>
+          <Field Name="IsSection">0</Field>
+          <Field Name="IconClass">flaticon-menu-button</Field>
+          <Field Name="Active">1</Field>
+        </Row>
+        <Row>
+          <Field Name="ID">2</Field>
+          <Field Name="Title">Restricted page</Field>
+          <Field Name="IsSection">0</Field>
+          <Field Name="Link">~sitecollection/SitePages/default.aspx</Field>
+          <Field Name="IconClass">flaticon-user</Field>
+          <Field Name="Parent">1;#Examlple Left Menu</Field>
+          <Field Name="ItemOrder">1.00000000000000</Field>
+          <Field Name="Active">1</Field>
+        </Row>
+        <Row>
+          <Field Name="ID">3</Field>
+          <Field Name="Title">Normal page</Field>
+          <Field Name="IsSection">0</Field>
+          <Field Name="Link">~sitecollection/SitePages/NormalPage.aspx</Field>
+          <Field Name="IconClass">flaticon-web</Field>
+          <Field Name="Parent">1;#Examlple Left Menu</Field>
+          <Field Name="ItemOrder">2.00000000000000</Field>
+          <Field Name="Active">1</Field>
+        </Row>
+      </Rows>
+    </Data>
+  </ListInstance>
+</Elements>

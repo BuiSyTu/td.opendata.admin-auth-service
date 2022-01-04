@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="adc2dba5-338b-4dfb-9e83-b3a1a96695a7" ReceiverAssembly="TD.Core.Deployment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8e29265fd67d6cee" ReceiverClass="TD.Core.Deployment.TDCoreModuleFeatureReceiver" Scope="Web" Title="TD.OpenData Feature1">
+  <ActivationDependencies>
+    <ActivationDependency FeatureId="d88694fe-fa0e-4186-b2e9-2655e90c9153" />
+  </ActivationDependencies>
+  <ElementManifests>
+    <ElementFile Location="Module\Manifest.xml" />
+    <ElementManifest Location="Roles\Elements.xml" />
+    <ElementManifest Location="Permissions\Elements.xml" />
+    <ElementManifest Location="Sitepages\Elements.xml" />
+    <ElementFile Location="Sitepages\default.aspx" />
+    <ElementManifest Location="Menu\Elements.xml" />
+  </ElementManifests>
+</Feature>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="6d1135cb-f6a3-4d5b-bb0b-636961b11ef5" solutionId="6d1135cb-f6a3-4d5b-bb0b-636961b11ef5" resetWebServer="false" sharePointProductVersion="15.0" name="TD.OpenData" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="9087d21c-34d5-4d9a-8aac-12060a43f96c" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="27881ccb-d225-4dc9-a349-4e5318c05340" />
+  </projectItems>
+</package>

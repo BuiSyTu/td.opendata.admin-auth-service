@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="6f76385c-0fce-45b1-8aaa-d698aac074d0" solutionId="6f76385c-0fce-45b1-8aaa-d698aac074d0" resetWebServer="false" sharePointProductVersion="15.0" name="TD.OpenData.Service" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <projectItems>
+    <projectItemReference itemId="0ed6d7af-2c6a-40f9-a636-f29b3495f300" />
+  </projectItems>
+</package>
