@@ -1,33 +1,34 @@
 ﻿using JWT;
 using JWT.Algorithms;
+using JWT.Builder;
+using JWT.Exceptions;
 using JWT.Serializers;
 using Microsoft.SharePoint;
 using Microsoft.SharePoint.IdentityModel;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
+using System.Net.Http;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using TD.OpenData.Service.ViewModels;
 
 namespace TD.OpenData.Service.Services
 {
     public class UserService
     {
-        private string secretJWT = "TanDan123!@#456789";
+        private readonly JwtService _jwtService;
 
-        public string CreateJWT(PayLoadJWT payload)
+        public UserService(JwtService jwtService)
         {
-            IJwtAlgorithm algorithm = new HMACSHA256Algorithm(); // symmetric
-            IJsonSerializer serializer = new JsonNetSerializer();
-            IBase64UrlEncoder urlEncoder = new JwtBase64UrlEncoder();
-            IJwtEncoder encoder = new JwtEncoder(algorithm, serializer, urlEncoder);
-            var token = encoder.Encode(payload, secretJWT);
-            return token;
+            _jwtService = jwtService;
         }
 
-        public string GetUserTokenKey(string user, string pass, string tokenDevice)
+        public string GetUserTokenKey(string user, string pass, string tokenDevice = null)
         {
             user = user.ToLower();
 
@@ -36,7 +37,8 @@ namespace TD.OpenData.Service.Services
                 Iat = (int)DateTimeOffset.UtcNow.Subtract(new DateTime(1970, 1, 1)).TotalSeconds,
                 Exp = (int)DateTimeOffset.UtcNow.AddYears(3).Subtract(new DateTime(1970, 1, 1)).TotalSeconds,
                 User = user,
-                Sub = user
+                Sub = user,
+                HashPwd = _jwtService.ExcuteEncryptAES(pass)
             };
 
 
@@ -61,7 +63,12 @@ namespace TD.OpenData.Service.Services
                     if (usersItems != null && usersItems.Count > 0)
                     {
                         payLoadJWT.UserPositionCode = usersItems[0]["UserPositionCode"].ToString();
-                        payLoadJWT.Permissions = usersItems[0]["Permissions"].ToString();
+
+                        var permissionLookupValues = (List<SPFieldLookupValue>)usersItems[0]["Permissions"];
+                        payLoadJWT.Permissions = permissionLookupValues.Select(x => x.LookupValue).ToList();
+
+                        var roleLookupValues = (List<SPFieldLookupValue>)usersItems[0]["Roles"];
+                        payLoadJWT.Roles = roleLookupValues.Select(x => x.LookupValue).ToList();
                     }
                 }
 
@@ -95,7 +102,16 @@ namespace TD.OpenData.Service.Services
                 }
             });
 
-            return CreateJWT(payLoadJWT);
+            return _jwtService.CreateJWT(payLoadJWT);
+        }
+
+        public string GetUserFromToken(string token)
+        {
+            string payload = _jwtService.ValidateJWT(token);
+            PayLoadJWT payloadJWT = JsonConvert.DeserializeObject<PayLoadJWT>(payload);
+            string user = payloadJWT.User;
+
+            return user;
         }
     }
 }

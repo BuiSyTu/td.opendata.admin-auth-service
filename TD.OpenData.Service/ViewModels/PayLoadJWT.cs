@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.SharePoint;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,11 +19,17 @@ namespace TD.OpenData.Service.ViewModels
         [JsonProperty("user")]
         public string User { get; set; }
 
+        [JsonProperty("hashPwd")]
+        public string HashPwd { get; set; }
+
         [JsonProperty("sub")]
         public string Sub { get; set; }
 
+        [JsonProperty("roles")]
+        public List<string> Roles { get; set; }
+
         [JsonProperty("permissions")]
-        public string Permissions { get; set; }
+        public List<string> Permissions { get; set; }
 
         [JsonProperty("userPositionCode")]
         public string UserPositionCode { get; set; }

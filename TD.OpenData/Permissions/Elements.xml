@@ -6,5 +6,158 @@
                 FeatureId="d88694fe-fa0e-4186-b2e9-2655e90c9153"
                 Url="Lists/Permissions"
                 Description="My List Instance">
+	  <Data>
+		  <Rows>
+			  <Row>
+				  <Field Name="ID">1</Field>
+				  <Field Name="Title">Quản trị danh mục dữ liệu</Field>
+				  <Field Name="PermissionCode">QTDanhMuc</Field>
+				  <Field Name="PermissionName">Quản trị danh mục dữ liệu</Field>
+				  <Field Name="Description"></Field>
+				  <Field Name="GroupSP">0;#QuanTriDanhMucDuLieu</Field>
+				  <Field Name="Active">1</Field>
+			  </Row>
+
+			  <Row>
+				  <Field Name="ID">2</Field>
+				  <Field Name="Title">Quản trị danh mục thủ tục hành chính</Field>
+				  <Field Name="PermissionCode">QTDanhMucTTHC</Field>
+				  <Field Name="PermissionName">Quản trị danh mục thủ tục hành chính</Field>
+				  <Field Name="Description"></Field>
+				  <Field Name="GroupSP">0;#QuanTriDanhMucThuTucHanhChinh</Field>
+				  <Field Name="Active">1</Field>
+			  </Row>
+
+			  <Row>
+				  <Field Name="ID">3</Field>
+				  <Field Name="Title">Thu thập dữ liệu hệ thống</Field>
+				  <Field Name="PermissionCode">DataHT.ThuThap</Field>
+				  <Field Name="PermissionName">Thu thập dữ liệu hệ thống</Field>
+				  <Field Name="Description"></Field>
+				  <Field Name="GroupSP">0;#ThuThapDuLieuHeThong</Field>
+				  <Field Name="Active">1</Field>
+			  </Row>
+
+			  <Row>
+				  <Field Name="ID">4</Field>
+				  <Field Name="Title">Duyệt dữ liệu hệ thống</Field>
+				  <Field Name="PermissionCode">DataHT.Duyet</Field>
+				  <Field Name="PermissionName">Duyệt dữ liệu hệ thống</Field>
+				  <Field Name="Description"></Field>
+				  <Field Name="GroupSP">0;#DuyetDuLieuHeThong</Field>
+				  <Field Name="Active">1</Field>
+			  </Row>
+
+			  <Row>
+				  <Field Name="ID">5</Field>
+				  <Field Name="Title">Chia sẻ dữ liệu hệ thống</Field>
+				  <Field Name="PermissionCode">DataHT.ChiaSe</Field>
+				  <Field Name="PermissionName">Chia sẻ dữ liệu hệ thống</Field>
+				  <Field Name="Description"></Field>
+				  <Field Name="GroupSP">0;#ChiaSeDuLieuHeThong</Field>
+				  <Field Name="Active">1</Field>
+			  </Row>
+
+			  <Row>
+				  <Field Name="ID">6</Field>
+				  <Field Name="Title">Khai thác dữ liệu hệ thống</Field>
+				  <Field Name="PermissionCode">DataHT.KhaiThac</Field>
+				  <Field Name="PermissionName">Khai thác dữ liệu hệ thống</Field>
+				  <Field Name="Description"></Field>
+				  <Field Name="GroupSP">0;#KhaiThacDuLieuHeThong</Field>
+				  <Field Name="Active">1</Field>
+			  </Row>
+
+			  <Row>
+				  <Field Name="ID">7</Field>
+				  <Field Name="Title">Thu thập dữ liệu đơn vị</Field>
+				  <Field Name="PermissionCode">DataDV.ThuThap</Field>
+				  <Field Name="PermissionName">Thu thập dữ liệu đơn vị</Field>
+				  <Field Name="Description"></Field>
+				  <Field Name="GroupSP">0;#ThuThapDuLieuDonVi</Field>
+				  <Field Name="Active">1</Field>
+			  </Row>
+
+			  <Row>
+				  <Field Name="ID">8</Field>
+				  <Field Name="Title">Duyệt dữ liệu đơn vị</Field>
+				  <Field Name="PermissionCode">DataDV.Duyet</Field>
+				  <Field Name="PermissionName">Duyệt dữ liệu đơn vị</Field>
+				  <Field Name="Description"></Field>
+				  <Field Name="GroupSP">0;#DuyetDuLieuDonVi</Field>
+				  <Field Name="Active">1</Field>
+			  </Row>
+
+			  <Row>
+				  <Field Name="ID">9</Field>
+				  <Field Name="Title">Chia sẻ dữ liệu đơn vị</Field>
+				  <Field Name="PermissionCode">DataDV.ChiaSe</Field>
+				  <Field Name="PermissionName">Chia sẻ dữ liệu đơn vị</Field>
+				  <Field Name="Description"></Field>
+				  <Field Name="GroupSP">0;#ChiaSeDuLieuDonVi</Field>
+				  <Field Name="Active">1</Field>
+			  </Row>
+
+			  <Row>
+				  <Field Name="ID">10</Field>
+				  <Field Name="Title">Khai thác dữ liệu đơn vị</Field>
+				  <Field Name="PermissionCode">DataDV.KhaiThac</Field>
+				  <Field Name="PermissionName">Khai thác dữ liệu đơn vị</Field>
+				  <Field Name="Description"></Field>
+				  <Field Name="GroupSP">0;#KhaiThacDuLieuDonVi</Field>
+				  <Field Name="Active">1</Field>
+			  </Row>
+			  
+			  <Row>
+				  <Field Name="ID">12</Field>
+				  <Field Name="Title">Quản trị danh mục trên cổng cán bộ</Field>
+				  <Field Name="PermissionCode">CongCanBo.QTDanhMuc</Field>
+				  <Field Name="PermissionName">Quản trị danh mục trên cổng cán bộ</Field>
+				  <Field Name="Description"></Field>
+				  <Field Name="GroupSP">0;#QuanTriDanhMucTrenCongCanBo</Field>
+				  <Field Name="Active">1</Field>
+			  </Row>
+			  
+			  <Row>
+				  <Field Name="ID">13</Field>
+				  <Field Name="Title">Tra cứ dữ liệu trên công cán bộ</Field>
+				  <Field Name="PermissionCode">CongCanBo.TraCuuDL</Field>
+				  <Field Name="PermissionName">Tra cứ dữ liệu trên công cán bộ</Field>
+				  <Field Name="Description"></Field>
+				  <Field Name="GroupSP">0;#TraCuuDuLieuTrenCongCanBo</Field>
+				  <Field Name="Active">1</Field>
+			  </Row>
+			  
+			  <Row>
+				  <Field Name="ID">14</Field>
+				  <Field Name="Title">Quản trị danh mục trên cổng dữ liệu mở</Field>
+				  <Field Name="PermissionCode">CongMo.QTDanhMuc</Field>
+				  <Field Name="PermissionName">Quản trị danh mục trên cổng dữ liệu mở</Field>
+				  <Field Name="Description"></Field>
+				  <Field Name="GroupSP">0;#QuanTriDanhMucTrenCongDuLieuMo</Field>
+				  <Field Name="Active">1</Field>
+			  </Row>
+
+			  <Row>
+				  <Field Name="ID">15</Field>
+				  <Field Name="Title">Quản trị tài khoản công dân trên cổng dữ liệu mở</Field>
+				  <Field Name="PermissionCode">CongMo.QTTaiKhoan</Field>
+				  <Field Name="PermissionName">Quản trị tài khoản công dân trên cổng dữ liệu mở</Field>
+				  <Field Name="Description"></Field>
+				  <Field Name="GroupSP">0;#QuanTriTaiKhoanCongDanTrenCongDuLieuMo</Field>
+				  <Field Name="Active">1</Field>
+			  </Row>
+		  
+	  			<Row>
+				  <Field Name="ID">11</Field>
+				  <Field Name="Title">Quản trị dữ liệu công dân (Duyệt, không duyệt, xóa</Field>
+				  <Field Name="PermissionCode">CongMo.QTDuLieu</Field>
+				  <Field Name="PermissionName">Quản trị dữ liệu công dân (Duyệt, không duyệt, xóa</Field>
+				  <Field Name="Description"></Field>
+				  <Field Name="GroupSP">0;#QuanTriDuLieuCongDan</Field>
+				  <Field Name="Active">1</Field>
+			  </Row>
+		  </Rows>
+	  </Data>
   </ListInstance>
 </Elements>

@@ -1,6 +1,0 @@
-﻿<%@ ServiceHost Language="C#" Debug="true"
-    Service="TD.OpenData.Services.OpenDataService, TD.OpenData.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=726a9c903be74df3"
-    CodeBehind="OpenDataService.svc.cs"
-    Factory="Microsoft.SharePoint.Client.Services.MultipleBaseAddressWebServiceHostFactory,
-    Microsoft.SharePoint.Client.ServerRuntime, Version=15.0.0.0, Culture=neutral,
-    PublicKeyToken=71e9bce111e9429c" %>
