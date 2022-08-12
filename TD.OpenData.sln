@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.31105.61
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TD.OpenData", "TD.OpenData\TD.OpenData.csproj", "{0F33DD0A-C874-4717-B9CF-B1E3AD94C2C2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CF761797-63CB-4EC7-B5E7-1327FE5C54E7} = {CF761797-63CB-4EC7-B5E7-1327FE5C54E7}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TD.OpenData.Service", "TD.OpenData.Service\TD.OpenData.Service.csproj", "{CF761797-63CB-4EC7-B5E7-1327FE5C54E7}"
 EndProject
