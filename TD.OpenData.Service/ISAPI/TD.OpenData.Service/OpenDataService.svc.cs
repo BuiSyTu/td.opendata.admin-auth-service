@@ -37,9 +37,9 @@ namespace TD.OpenData.Service
             _loginService = _unityContainer.Resolve<LoginService>();
         }
 
-        public Stream GetUserTokenKey(string user = null, string pass = null, string tokenDevice = null)
+        public Stream GetUserTokenKey(string user = null, string pass = null)
         {
-            var userTokenKey = _userService.GetUserTokenKey(user, pass, tokenDevice);
+            var userTokenKey = _userService.GetUserTokenKey(user, pass);
 
             HttpCookie cookie = new("token")
             {

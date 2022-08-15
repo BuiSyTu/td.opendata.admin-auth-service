@@ -12,8 +12,8 @@ namespace TD.OpenData.Service
         string HelloWorld();
 
         [OperationContract]
-        [WebGet(UriTemplate = "UserTokenKey?user={user}&pass={pass}&tokenDevice={tokenDevice}", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
-        Stream GetUserTokenKey(string user = null, string pass = null, string tokenDevice = null);
+        [WebGet(UriTemplate = "UserTokenKey?user={user}&pass={pass}", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
+        Stream GetUserTokenKey(string user = null, string pass = null);
 
         [OperationContract]
         [WebGet(UriTemplate = "UserInfo", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]

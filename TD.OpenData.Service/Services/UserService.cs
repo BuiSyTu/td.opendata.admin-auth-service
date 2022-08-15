@@ -28,7 +28,7 @@ namespace TD.OpenData.Service.Services
             _jwtService = jwtService;
         }
 
-        public string GetUserTokenKey(string user, string pass, string tokenDevice = null)
+        public string GetUserTokenKey(string user, string pass)
         {
             user = user.ToLower();
 
