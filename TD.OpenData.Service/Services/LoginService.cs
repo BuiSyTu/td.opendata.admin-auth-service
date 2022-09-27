@@ -52,6 +52,14 @@ namespace TD.OpenData.Service.Services
 
         public string AuthenticationSP(HttpClient client, string urlAuthenSP, string user, string pass)
         {
+            // FIXME: To resolve "Could not establish trust relationship for the SSL/TLS secure channel with authority"
+            // FIXME: This is not a good practice
+            System.Net.ServicePointManager.ServerCertificateValidationCallback +=
+            (se, cert, chain, sslerror) =>
+            {
+                return true;
+            };
+
             StringContent dataReqAuth = GetContentAuthenticationSP(
                 user.Trim().Replace("\r\n", "").Replace("\n", "").Replace("\r", ""),
                 pass);
